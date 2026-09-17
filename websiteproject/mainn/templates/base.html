@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Website</title>
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% include 'notice.html' %}
+
+</body>
+</html>
