@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Website</title>
+</head>
+<body>
+
+    <h1>School Student List</h1>
+
+    {% for student in students %}
+
+        <p>
+            {{ student }}
+
+            <a href="{% url 'school:result' student %}">
+                View Result
+            </a>
+        </p>
+
+    {% endfor %}
+
+</body>
+</html>
