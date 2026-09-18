@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Teacher</title>
+</head>
+<body>
+
+    <h1>Add Teacher</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Teacher Name:</label>
+        <input type="text" name="teacher_name">
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+
+    <a href="{% url 'teachers:teacher_list' message='Welcome Teachers' %}">
+        Back to Teachers
+    </a>
+
+</body>
+</html>
