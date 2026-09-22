@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Welcome to My Website</h1>
+
+<p>
+    This is a simple user authentication website.
+</p>
+
+{% if user.is_authenticated %}
+
+    <h3>Hello, {{ user.username }}!</h3>
+
+    <p>
+        You are currently logged in.
+    </p>
+
+    <a href="{% url 'visit_counter' %}">
+        Go to Visit Counter
+    </a>
+
+{% else %}
+
+    <p>
+        Please sign up or login to use the Visit Counter.
+    </p>
+
+{% endif %}
+
+{% endblock %}

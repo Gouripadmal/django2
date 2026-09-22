@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Visit Counter</h1>
+
+<h2>Hello, {{ user.username }}!</h2>
+
+<p>
+
+    You have visited this page
+
+    <strong>{{ count }}</strong>
+
+    times during this session.
+
+</p>
+
+<p>
+    Refresh the page to increase the count.
+</p>
+
+{% endblock %}
