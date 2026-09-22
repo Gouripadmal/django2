@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Welcome to Our Book Club</h1>
+
+<p>
+    Read books, share ideas, and connect with other book lovers.
+</p>
+
+{% if user.is_authenticated %}
+
+    <p>Hello, {{ user.username }}!</p>
+
+{% else %}
+
+    <p>Please sign up or log in.</p>
+
+{% endif %}
+
+{% endblock %}

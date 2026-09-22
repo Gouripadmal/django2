@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Club - Welcome</title>
+</head>
+
+<body>
+
+    <h1>Welcome to the Book Club!</h1>
+
+    <h2>Hello, {{ user.username }}!</h2>
+
+    <p>
+        You have visited this page
+        <strong>{{ count }}</strong>
+        times during this session.
+    </p>
+
+    <a href="{% url 'logout' %}">Logout</a>
+
+</body>
+</html>
