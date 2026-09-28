@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Certificate</title>
+</head>
+
+<body>
+
+<h1>Create Certificate</h1>
+
+<form method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Generate Certificate">
+
+</form>
+
+</body>
+
+</html>

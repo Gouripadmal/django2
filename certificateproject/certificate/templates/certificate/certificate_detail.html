@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Certificate Details</title>
+</head>
+
+<body>
+
+<h1>Certificate Details</h1>
+
+<p>
+    <strong>Student Name:</strong>
+    {{ certificate.student_name }}
+</p>
+
+<p>
+    <strong>Course Name:</strong>
+    {{ certificate.course_name }}
+</p>
+
+<p>
+    <strong>Completion Date:</strong>
+    {{ certificate.completion_date }}
+</p>
+
+<br>
+
+<a href="{% url 'download_certificate' certificate.id %}">
+    <button>Download Certificate PDF</button>
+</a>
+
+<a href="{% url 'send_certificate_email' certificate.id %}">
+    <button>Send Certificate by Email</button>
+</a>
+
+</body>
+
+</html>
